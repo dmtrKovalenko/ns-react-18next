@@ -4,6 +4,7 @@
   "description": "Namespaced i18next localization in react with no tears",
   "main": "index.js",
   "scripts": {
+    "build": "tsc -p src/tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,5 +27,10 @@
   "bugs": {
     "url": "https://github.com/dmtrKovalenko/ns-react-18next/issues"
   },
-  "homepage": "https://github.com/dmtrKovalenko/ns-react-18next#readme"
+  "homepage": "https://github.com/dmtrKovalenko/ns-react-18next#readme",
+  "dependencies": {
+    "tslint": "^5.10.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^2.9.2"
+  }
 }
