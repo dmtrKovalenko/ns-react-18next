@@ -1,0 +1,30 @@
+{
+  "name": "ns-react-i18next",
+  "version": "0.0.1",
+  "description": "Namespaced i18next localization in react with no tears",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmtrKovalenko/ns-react-18next.git"
+  },
+  "keywords": [
+    "react",
+    "i18next",
+    "localization",
+    "namespace",
+    "localize",
+    "i18n",
+    "react",
+    "component",
+    "context"
+  ],
+  "author": "Dmitriy Kovalenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dmtrKovalenko/ns-react-18next/issues"
+  },
+  "homepage": "https://github.com/dmtrKovalenko/ns-react-18next#readme"
+}
