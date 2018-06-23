@@ -8,8 +8,12 @@ interface I18NextProviderProps {
 const { Consumer, Provider } = React.createContext(i18n.init());
 export const I18NextConsumer = Consumer;
 
-const I18NextProvider: React.SFC<I18NextProviderProps> = ({ i18n }) => {
-  return <Provider value={i18n} />
+const I18NextProvider: React.SFC<I18NextProviderProps> = ({ i18n, children }) => {
+  if (!i18n) {
+    console.error('Seems you have not pass the i18n object to globl I18NextProviderProps, fallback to i18n.init()')
+  }
+  
+  return <Provider value={i18n}> {children} </Provider>
 };
 
 export default I18NextProvider;
