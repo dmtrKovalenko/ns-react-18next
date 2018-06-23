@@ -20,8 +20,7 @@ const Translate: React.SFC<TranslateProps> = ({ children }) => {
   return (
     <I18NextConsumer>
       {
-        i18n =>.
-         (
+        i18n => (
           <NameSpaceConsumer>
             {
               ns => i18n.t(childrenToNamespacedKey(ns, children))
