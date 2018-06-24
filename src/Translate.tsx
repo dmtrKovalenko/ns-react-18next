@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as PropTypes from 'prop-types';
 import { I18NextConsumer } from './I18NextProvider';
 import { NameSpaceConsumer } from './NamespaceProvider';
 
@@ -29,5 +30,9 @@ const Translate: React.SFC<TranslateProps> = ({ children }) => (
     }
   </I18NextConsumer>
 )
+
+Translate.propTypes = {
+  children: PropTypes.string
+}
 
 export default Translate;

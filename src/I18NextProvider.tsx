@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as PropTypes from 'prop-types'
 import * as defaultI18next from 'i18next';
 
 const { Consumer, Provider } = React.createContext({ i18n: defaultI18next.init(), locale: null });
@@ -13,6 +14,10 @@ interface State {
 }
 
 class I18NextProvider extends React.Component<I18NextProviderProps, State> {
+  static propTypes = {
+    locale: PropTypes.string
+  }
+  
   state = {
     locale: null // language selection is async, while is not initislized set to null
   }
