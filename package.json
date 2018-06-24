@@ -3,9 +3,12 @@
   "version": "0.0.1",
   "description": "Namespaced i18next localization in react with no tears",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "build": "tsc -p src/tsconfig.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --hot",
+    "build": "tsc -p ./tsconfig.lib.json && node copy.js",
+    "test": "jest",
+    "publish": "np --contents=build"
   },
   "repository": {
     "type": "git",
@@ -28,9 +31,59 @@
     "url": "https://github.com/dmtrKovalenko/ns-react-18next/issues"
   },
   "homepage": "https://github.com/dmtrKovalenko/ns-react-18next#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@types/enzyme": "^3.1.11",
+    "@types/enzyme-adapter-react-16": "^1.0.2",
+    "@types/i18next": "^8.4.3",
+    "@types/jest": "^23.1.1",
+    "@types/prop-types": "^15.5.3",
+    "@types/react": "^16.4.1",
+    "@types/react-dom": "^16.0.6",
+    "awesome-typescript-loader": "^5.2.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "codecov": "^3.0.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-react-adapter-future": "^1.1.3",
+    "html-webpack-plugin": "^3.2.0",
+    "i18next": "^11.3.3",
+    "i18next-browser-languagedetector": "^2.2.0",
+    "jest": "^23.1.0",
+    "json-loader": "^0.5.7",
+    "np": "^3.0.4",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-app-rewired": "^1.5.2",
+    "react-dom": "^16.4.1",
+    "react-hot-loader": "^4.3.3",
+    "source-map-loader": "^0.2.3",
+    "ts-jest": "^22.4.6",
     "tslint": "^5.10.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^2.9.2"
+    "typescript": "^2.9.2",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "peerDependencies": {
+    "react": "^16.4.1",
+    "i18next": "^11.3.3"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "setupTestFrameworkScriptFile": "<rootDir>/__tests__/startUp.js",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
