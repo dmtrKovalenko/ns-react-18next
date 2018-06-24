@@ -1,0 +1,18 @@
+{
+  "en": {
+    "common": {
+      "hi": "Hi"
+    },
+    "specificNs": {
+      "something_specific": "Something specific"
+    }
+  },
+  "ru": {
+    "common": {
+      "hi": "Привет"
+    },
+    "specificNs": {
+      "something_specific": "Что-то специфичное"
+    }
+  }
+}
