@@ -2,7 +2,7 @@ import * as React from 'react';
 import { I18NextConsumer } from './I18NextProvider';
 import { NameSpaceConsumer } from './NamespaceProvider';
 
-interface TranslateProps {
+export interface TranslateProps {
   children: string;
 }
 

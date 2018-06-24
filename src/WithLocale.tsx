@@ -9,9 +9,8 @@ export interface WithLocaleProps {
   tn: (key: string, inerpolate?: { [key: string]: string }) => string;
 }
 
-export default (defaultNs?: string) => 
-  (Component: React.ComponentType<WithLocaleProps>) => 
-  (props: any) => (
+export default (defaultNs?: string) => (Component: React.ComponentType<WithLocaleProps>) => {
+  const WithLocale: React.SFC<any> = (props) => (
     <I18NextConsumer>
       {
         ({ i18n, locale }) => (
@@ -28,3 +27,6 @@ export default (defaultNs?: string) =>
       }
     </I18NextConsumer>
   )
+
+  return WithLocale
+}

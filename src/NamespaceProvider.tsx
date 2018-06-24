@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface NameSpaceProviderProps {
+export interface NameSpaceProviderProps {
   ns: string;
 }
 

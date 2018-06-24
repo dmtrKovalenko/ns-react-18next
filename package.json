@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "description": "Namespaced i18next localization in react with no tears",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "start": "webpack-dev-server --hot",
-    "build": "tsc -p src/tsconfig.json",
+    "build": "tsc -p ./tsconfig.lib.json && node copy.js",
     "test": "jest"
   },
   "repository": {

@@ -4,7 +4,7 @@ import * as defaultI18next from 'i18next';
 const { Consumer, Provider } = React.createContext({ i18n: defaultI18next.init(), locale: null });
 export const I18NextConsumer = Consumer;
 
-interface I18NextProviderProps {
+export interface I18NextProviderProps {
   i18n: defaultI18next.i18n;
 }
 
