@@ -16,20 +16,18 @@ const childrenToNamespacedKey = (ns: string, childern: string) => {
   return key
 }
 
-const Translate: React.SFC<TranslateProps> = ({ children }) => {
-  return (
-    <I18NextConsumer>
-      {
-        i18n => (
-          <NameSpaceConsumer>
-            {
-              ns => i18n.t(childrenToNamespacedKey(ns, children))
-            }
-          </NameSpaceConsumer>
-        )
-      }
-    </I18NextConsumer>
-  )
-};
+const Translate: React.SFC<TranslateProps> = ({ children }) => (
+  <I18NextConsumer>
+    {
+      ({ i18n }) => (
+        <NameSpaceConsumer>
+          {
+            ns => i18n.t(childrenToNamespacedKey(ns, children))
+          }
+        </NameSpaceConsumer>
+      )
+    }
+  </I18NextConsumer>
+)
 
 export default Translate;

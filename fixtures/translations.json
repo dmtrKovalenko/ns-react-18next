@@ -1,10 +1,10 @@
 {
   "en": {
     "common": {
-      "hi": "hi"
+      "hi": "Hi"
     },
     "specificNs": {
-      "somesthing_specific": "somesthing_specific"
+      "something_specific": "Something specific"
     }
   },
   "ru": {
@@ -12,7 +12,7 @@
       "hi": "Привет"
     },
     "specificNs": {
-      "somesthing_specific": "что-то специфичное"
+      "something_specific": "Что-то специфичное"
     }
   }
 }
