@@ -4,6 +4,7 @@
     "target": "es5",
     "noUnusedLocals": false,
     "outDir": "../build",
-    "jsx": "react"
+    "jsx": "react",
+    "sourceMap": true
   }
 }

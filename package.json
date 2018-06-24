@@ -42,6 +42,7 @@
     "awesome-typescript-loader": "^5.2.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
+    "codecov": "^3.0.2",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-react-adapter-future": "^1.1.3",
