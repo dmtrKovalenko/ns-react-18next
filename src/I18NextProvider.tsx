@@ -1,19 +1,48 @@
 import * as React from 'react';
-import * as i18n from 'i18next';
+import * as defaultI18next from 'i18next';
 
-interface I18NextProviderProps {
-  i18n: i18n.i18n;
-}
-
-const { Consumer, Provider } = React.createContext(i18n.init());
+const { Consumer, Provider } = React.createContext({ i18n: defaultI18next.init(), locale: null });
 export const I18NextConsumer = Consumer;
 
-const I18NextProvider: React.SFC<I18NextProviderProps> = ({ i18n, children }) => {
-  if (!i18n) {
-    console.error('Seems you have not pass the i18n object to globl I18NextProviderProps, fallback to i18n.init()')
+interface I18NextProviderProps {
+  i18n: defaultI18next.i18n;
+}
+
+interface State {
+  locale: string | null;
+}
+
+class I18NextProvider extends React.Component<I18NextProviderProps, State> {
+  state = {
+    locale: null // language selection is async, while is not initislized set to null
   }
-  
-  return <Provider value={i18n}> {children} </Provider>
-};
+
+  componentDidMount() {
+    const { i18n } = this.props
+
+    if (!i18n) {
+      console.error('Seems you have not pass the i18n object to the global I18NextProviderProvider')
+      return
+    }
+
+    i18n.on("languageChanged", this.handleLanguageChange)
+  }
+
+  componentWillUnmount() {
+    console.log('FOIFFffeijfwqoefjoeiqwjfs')
+    this.props.i18n.off('languageChanged', this.handleLanguageChange)
+  }
+
+  handleLanguageChange = (language: string) => {
+    this.setState({ locale: language })
+  }
+
+  render() {
+    const { locale } = this.state
+    const { i18n, children } = this.props
+
+    return <Provider value={{ i18n, locale }}> {children} </Provider>
+  }
+}
 
 export default I18NextProvider;
