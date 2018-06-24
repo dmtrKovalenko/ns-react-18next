@@ -6,8 +6,11 @@
   "types": "index.d.ts",
   "scripts": {
     "start": "webpack-dev-server --hot",
-    "build": "tsc -p ./tsconfig.lib.json && node copy.js",
+    "build:amd": "tsc -p ./tsconfig.amd.json",
+    "build:commonjs": "tsc -p ./tsconfig.lib.json",
+    "build": "npm run build:amd && npm run build:commonjs && node copy.js",
     "test": "jest",
+    "size-limit": "size-limit",
     "publish": "np --contents=build"
   },
   "repository": {
@@ -57,6 +60,7 @@
     "react-app-rewired": "^1.5.2",
     "react-dom": "^16.4.1",
     "react-hot-loader": "^4.3.3",
+    "size-limit": "^0.18.3",
     "source-map-loader": "^0.2.3",
     "ts-jest": "^22.4.6",
     "tslint": "^5.10.0",
@@ -70,6 +74,12 @@
     "react": "^16.4.1",
     "i18next": "^11.3.3"
   },
+  "size-limit": [
+    {
+      "size": "2kb",
+      "path": "build/index.js"
+    }
+  ],
   "jest": {
     "collectCoverage": true,
     "setupTestFrameworkScriptFile": "<rootDir>/__tests__/startUp.js",
@@ -85,5 +95,8 @@
       "json",
       "node"
     ]
+  },
+  "dependencies": {
+    "csstype": "^2.5.5"
   }
 }

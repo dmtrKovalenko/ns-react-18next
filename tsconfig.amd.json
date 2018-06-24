@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "amd",
+    "outFile": "./build/index.amd.js",
+    "declaration": true,
+    "moduleResolution": "node"
+  },
+  "files": [
+    "src/index.ts"
+  ]
+}
