@@ -1,6 +1,6 @@
 # NS react-i18next
 [![npm package](https://img.shields.io/npm/v/material-ui-pickers.svg)](https://www.npmjs.org/package/material-ui-pickers)
-[![npm download](https://img.shields.io/npm/dm/material-ui-pickers.svg)](https://www.npmjs.org/package/material-ui-pickers)
+[![codecov](https://codecov.io/gh/dmtrKovalenko/ns-react-18next/branch/master/graph/badge.svg)](https://codecov.io/gh/dmtrKovalenko/ns-react-18next)
 [![Build Status](https://travis-ci.org/dmtrKovalenko/ns-react-18next.svg?branch=master)](https://travis-ci.org/dmtrKovalenko/ns-react-18next)
 > Manage i18next namespaces with a power of react v16 context
 
