@@ -1,6 +1,6 @@
 {
   "name": "ns-react-i18next",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Namespaced i18next localization in react with no tears",
   "main": "index.js",
   "types": "index.d.ts",
@@ -11,7 +11,7 @@
     "build": "npm run build:amd && npm run build:commonjs && node copy.js",
     "test": "jest",
     "size-limit": "size-limit",
-    "publish": "np --contents=build"
+    "publish": "np --no-publish && npm run build &&np npm publish build"
   },
   "repository": {
     "type": "git",
@@ -95,8 +95,5 @@
       "json",
       "node"
     ]
-  },
-  "dependencies": {
-    "csstype": "^2.5.5"
   }
 }
