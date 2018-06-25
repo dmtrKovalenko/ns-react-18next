@@ -34,7 +34,6 @@ class I18NextProvider extends React.Component<I18NextProviderProps, State> {
   }
 
   componentWillUnmount() {
-    console.log('FOIFFffeijfwqoefjoeiqwjfs')
     this.props.i18n.off('languageChanged', this.handleLanguageChange)
   }
 
