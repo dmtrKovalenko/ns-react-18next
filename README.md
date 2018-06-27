@@ -10,7 +10,7 @@
 ### Installation
 Available as npm package.
 ```sh
-npm install material-ui-pickers -S
+npm install ns-react-i18next
 ```
 
 Add global provider to the root of your app
@@ -37,7 +37,7 @@ ReactDom.render(
 ```
 
 ### Usage
-Use another provider to share namespace between components sub-tree.
+Use another provider to share namespace between components sub-tree and `<Translate>` component for getting localized string. Note that when the language will be changed (with a help of `i18n.changeLanguage()`) - every translate will rerender by itself.
 
 ```jsx
 import { Translate, NameSpaceProvider } from 'ns-react-i18next'
@@ -49,7 +49,7 @@ import { Translate, NameSpaceProvider } from 'ns-react-i18next'
 </NameSpaceProvider>
 ```
 
-Even possible to wrap several routes to share namespaces. 
+Even possible to share namespace for several routes.
 
 ```jsx
 <NameSpaceProvider ns="customers">
@@ -58,4 +58,4 @@ Even possible to wrap several routes to share namespaces.
 </NameSpaceProvider>
 ```
 
-There any Translate's, that will be rendered by 2 customer's routes will be shared with `customers` namespace. 
+There any `Translate` of CustomersList, ManageCustomer and thiers sub-components and sub-routes of take the 'customers' namespace.
