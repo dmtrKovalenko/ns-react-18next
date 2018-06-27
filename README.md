@@ -38,7 +38,7 @@ ReactDom.render(
 ```
 
 ### Usage
-Use another provider to share namespace between components sub-tree and `<Translate>` component for getting localized string. Note that when the language will be changed (with a help of `i18n.changeLanguage()`) - every translate will rerender by itself.
+Use another provider to share namespace between components sub-tree. Any `<Translate>` component under this provider will render translated string of shared namespace + children string. Note that when the language will be changed (with a help of `i18n.changeLanguage()`) - every translate will rerender by itself.
 
 ```jsx
 import { Translate, NameSpaceProvider } from 'ns-react-i18next'
