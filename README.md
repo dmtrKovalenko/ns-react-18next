@@ -17,6 +17,7 @@ Add global provider to the root of your app
 
 ```jsx
 import * as i18n from 'i18next';
+import { I18NextProvider } from 'ns-react-i18next'
 
 i18n
   .use(LanguageDetector)
