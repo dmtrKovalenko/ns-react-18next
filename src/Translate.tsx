@@ -2,13 +2,15 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { I18NextConsumer } from './I18NextProvider';
 import { NameSpaceConsumer } from './NamespaceProvider';
+import { TranslationOptions } from 'i18next';
 
 export interface TranslateProps {
   children: string;
+  interpolate?: TranslationOptions
 }
 
-const childrenToNamespacedKey = (ns: string, childern: string) => {
-  const key = childern.trim()
+const childrenToNamespacedKey = (ns: string, children: string) => {
+  const key = children.trim()
 
   if (ns) {
     return `${ns}:${key}`
@@ -17,13 +19,13 @@ const childrenToNamespacedKey = (ns: string, childern: string) => {
   return key
 }
 
-const Translate: React.SFC<TranslateProps> = ({ children }) => (
+const Translate: React.SFC<TranslateProps> = ({ children, interpolate }) => (
   <I18NextConsumer>
     {
       ({ i18n }) => (
         <NameSpaceConsumer>
           {
-            ns => i18n.t(childrenToNamespacedKey(ns, children))
+            ns => i18n.t(childrenToNamespacedKey(ns, children), interpolate)
           }
         </NameSpaceConsumer>
       )
@@ -32,7 +34,8 @@ const Translate: React.SFC<TranslateProps> = ({ children }) => (
 )
 
 Translate.propTypes = {
-  children: PropTypes.string
+  children: PropTypes.string,
+  interpolate: PropTypes.object,
 }
 
 export default Translate;

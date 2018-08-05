@@ -4,7 +4,8 @@
       "hi": "Hi"
     },
     "specificNs": {
-      "something_specific": "Something specific"
+      "something_specific": "Something specific",
+      "interpolated": "Some interpolated value => {{ value }}"
     }
   },
   "ru": {
@@ -12,7 +13,8 @@
       "hi": "Привет"
     },
     "specificNs": {
-      "something_specific": "Что-то специфичное"
+      "something_specific": "Что-то специфичное",
+      "interpolated": "Интерполированное значение => {{ value }}"
     }
   }
 }
