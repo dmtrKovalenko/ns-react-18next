@@ -1,6 +1,6 @@
 {
   "name": "ns-react-i18next",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Namespaced i18next localization in react with no tears",
   "main": "index.js",
   "types": "index.d.ts",
