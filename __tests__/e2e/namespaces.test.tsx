@@ -30,3 +30,20 @@ describe('Namespaces usage', () => {
     expect(component.find('div').text().trim()).toBe("Что-то специфичное")
   })
 })
+
+describe('Interpolate', () => {
+  it("Should render interpolated value", () => {
+    i18n.changeLanguage("en")
+    let component = mount(
+      <div>
+        <I18NextProvider i18n={i18n}>
+          <NameSpaceProvider ns="specificNs">
+            <Translate interpolate={{ value: 'test' }}> interpolated </Translate>
+          </NameSpaceProvider>
+        </I18NextProvider>
+      </div>
+    )
+
+    expect(component.find('div').text().trim()).toBe("Some interpolated value => test")
+  })
+})
