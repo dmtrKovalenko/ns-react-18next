@@ -1,19 +1,19 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
-export interface NameSpaceProviderProps {
+export interface NamespaceProviderProps {
   ns: string;
 }
 
 const { Consumer, Provider } = React.createContext('');
 export const NameSpaceConsumer = Consumer;
 
-const NameSpaceProvider: React.SFC<NameSpaceProviderProps> = ({ ns, children }) => {
+const NamespaceProvider: React.SFC<NamespaceProviderProps> = ({ ns, children }) => {
   return <Provider value={ns}> {children} </Provider>
 };
 
-NameSpaceProvider.propTypes = {
+NamespaceProvider.propTypes = {
   ns: PropTypes.string
 }
 
-export default NameSpaceProvider;
+export default NamespaceProvider;

@@ -3,7 +3,7 @@ import { mount, ReactWrapper } from "enzyme";
 import I18NextProvider from "../../src/I18NextProvider";
 import Translate from "../../src/Translate";
 import i18n from "../../fixtures/i18n";
-import NameSpaceProvider from "../../src/NamespaceProvider";
+import NamespaceProvider from "../../src/NamespaceProvider";
 
 describe('Namespaces usage', () => {
   let component: ReactWrapper;
@@ -12,9 +12,9 @@ describe('Namespaces usage', () => {
     component = mount(
       <div>
         <I18NextProvider i18n={i18n}>
-          <NameSpaceProvider ns="specificNs">
+          <NamespaceProvider ns="specificNs">
             <Translate> something_specific </Translate>
-          </NameSpaceProvider>
+          </NamespaceProvider>
         </I18NextProvider>
       </div>
     )
@@ -37,9 +37,9 @@ describe('Interpolate', () => {
     let component = mount(
       <div>
         <I18NextProvider i18n={i18n}>
-          <NameSpaceProvider ns="specificNs">
+          <NamespaceProvider ns="specificNs">
             <Translate interpolate={{ value: 'test' }}> interpolated </Translate>
-          </NameSpaceProvider>
+          </NamespaceProvider>
         </I18NextProvider>
       </div>
     )

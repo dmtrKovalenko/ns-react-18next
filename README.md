@@ -38,22 +38,22 @@ ReactDom.render(
 Use another provider to share namespace between components sub-tree.
 
 ```jsx
-import { Translate, NameSpaceProvider } from 'ns-react-i18next'
+import { Translate, NamespaceProvider } from 'ns-react-i18next'
 
-<NameSpaceProvider ns="specificNs">
+<NamespaceProvider ns="specificNs">
   // specificNs:some_complex_structure
-  <p> <Translate interpolate={{ key: 'value' }}> some_complex_structure </Translate> </p> 
+  <p> <Translate interpolate={{ key: 'value' }}> some_complex_structure </Translate> </p>
   <p> <Translate> something_specific </Translate> </p> // specificNs:something_specific
-</NameSpaceProvider>
+</NamespaceProvider>
 ```
 
-Even possible to wrap several routes to share namespaces. 
+Even possible to wrap several routes to share namespaces.
 
 ```jsx
-<NameSpaceProvider ns="customers">
+<NamespaceProvider ns="customers">
   <Route path="/customers" component={CustomersList} />
   <Route path="/customers/:id" component={ManageCustomer} />
-</NameSpaceProvider>
+</NamespaceProvider>
 ```
 
-There any Translate's, that will be rendered by 2 customer's routes will be shared with `customers` namespace. 
+There any Translate's, that will be rendered by 2 customer's routes will be shared with `customers` namespace.
