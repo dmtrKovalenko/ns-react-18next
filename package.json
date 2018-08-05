@@ -11,7 +11,7 @@
     "build": "npm run build:amd && npm run build:commonjs && node copy.js",
     "test": "jest",
     "size-limit": "size-limit",
-    "publish": "np --no-publish && npm run build && npm publish build"
+    "publish": "npm run build && np --no-publish"
   },
   "repository": {
     "type": "git",
