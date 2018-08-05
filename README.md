@@ -41,22 +41,22 @@ ReactDom.render(
 Use another provider to share namespace between components sub-tree. Any `<Translate>` component under this provider will render translated string of shared namespace + children string. Note that when the language will be changed (with a help of `i18n.changeLanguage()`) - every translate will rerender by itself.
 
 ```jsx
-import { Translate, NameSpaceProvider } from 'ns-react-i18next'
+import { Translate, NamespaceProvider } from 'ns-react-i18next'
 
-<NameSpaceProvider ns="specificNs">
+<NamespaceProvider ns="specificNs">
   // specificNs:some_complex_structure
-  <p> <Translate interpolate={{ key: 'value' }}> some_complex_structure </Translate> </p> 
+  <p> <Translate interpolate={{ key: 'value' }}> some_complex_structure </Translate> </p>
   <p> <Translate> something_specific </Translate> </p> // specificNs:something_specific
-</NameSpaceProvider>
+</NamespaceProvider>
 ```
 
 Even possible to share namespace for several routes.
 
 ```jsx
-<NameSpaceProvider ns="customers">
+<NamespaceProvider ns="customers">
   <Route path="/customers" component={CustomersList} />
   <Route path="/customers/:id" component={ManageCustomer} />
-</NameSpaceProvider>
+</NamespaceProvider>
 ```
 
 There any `Translate` of CustomersList, ManageCustomer and thiers sub-components and sub-routes of take the 'customers' namespace.
