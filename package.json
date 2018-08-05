@@ -81,6 +81,7 @@
     }
   ],
   "jest": {
+    "testURL": "http://localhost/",
     "collectCoverage": true,
     "setupTestFrameworkScriptFile": "<rootDir>/__tests__/startUp.js",
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
