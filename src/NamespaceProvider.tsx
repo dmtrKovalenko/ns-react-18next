@@ -13,7 +13,7 @@ const NamespaceProvider: React.SFC<NamespaceProviderProps> = ({ ns, children }) 
 };
 
 NamespaceProvider.propTypes = {
-  ns: PropTypes.string
+  ns: PropTypes.string.isRequired
 }
 
 export default NamespaceProvider;

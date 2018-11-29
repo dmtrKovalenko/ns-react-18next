@@ -15,9 +15,9 @@ interface State {
 
 class I18NextProvider extends React.Component<I18NextProviderProps, State> {
   static propTypes = {
-    locale: PropTypes.string
+    i18n: PropTypes.object.isRequired
   }
-  
+
   state = {
     locale: null // language selection is async, while is not initislized set to null
   }
