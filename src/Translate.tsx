@@ -19,6 +19,7 @@ const childrenToNamespacedKey = (ns: string, children: string) => {
   return key
 }
 
+// @ts-ignore
 const Translate: React.SFC<TranslateProps> = ({ children, interpolate }) => (
   <I18NextConsumer>
     {
@@ -33,9 +34,10 @@ const Translate: React.SFC<TranslateProps> = ({ children, interpolate }) => (
   </I18NextConsumer>
 )
 
+// @ts-ignore
 Translate.propTypes = {
-  children: PropTypes.string,
-  interpolate: PropTypes.object,
+  children: PropTypes.string.isRequired,
+  interpolate: PropTypes.shape({ }),
 }
 
 export default Translate;
