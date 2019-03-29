@@ -6,6 +6,9 @@
 [![Build Status](https://travis-ci.org/dmtrKovalenko/ns-react-18next.svg?branch=master)](https://travis-ci.org/dmtrKovalenko/ns-react-18next)
 > Manage i18next namespaces with a power of react v16 context
 
+## Unmaintained
+
+The purpose of this library was merged to official [react-i18next](https://github.com/i18next/react-i18next) at v9. So please use it.  :)
 
 ### Installation
 Available as npm package.
